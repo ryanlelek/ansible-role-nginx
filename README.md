@@ -7,17 +7,10 @@ Requirements
 ------------
 
 Tested on Ubuntu.  
-See Also: ryanlelek.nginx_site
-
-Role Variables
---------------
-
-Change the redirect URL when no sites match:  
-- **redirect_url**: https://www.google.com
+**See Also: [ryanlelek.site](https://github.com/ryanlelek/ansible-role-site)**
 
 Dependencies
 ------------
-
 None
 
 Example Playbook
@@ -26,6 +19,10 @@ Example Playbook
     - hosts: web
       roles:
          - ryanlelek.nginx
+         # Optional, Default Site
+         - ryanlelek.site
+           site_domain: default
+           site_redirect: https://www.google.com
 
 License
 -------
